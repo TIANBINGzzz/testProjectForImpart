@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GTM Test Page</title>
+</head>
+<body>
+  <h1>Query Parameter Display</h1>
+  <p>Key1: <span id="key1">hello</span></p>
+  <p>Key2: <span id="key2">impart</span></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('key1').innerText = params.get('key1') || 'Not Found';
+    document.getElementById('key2').innerText = params.get('key2') || 'Not Found';
+  </script>
+</body>
+</html>
